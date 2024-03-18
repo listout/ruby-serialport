@@ -1,4 +1,6 @@
-require 'serialport.so'
+require 'serialport.bundle' if RUBY_PLATFORM.include?('darwin')
+require 'serialport.so' unless RUBY_PLATFORM.include?('darwin')
+
 require 'serialport/version'
 
 # This class is used for communication over a serial port.
