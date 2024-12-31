@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'serialport.bundle' if RUBY_PLATFORM.include?('darwin')
 require 'serialport.so' unless RUBY_PLATFORM.include?('darwin')
 

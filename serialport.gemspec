@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+require 'English'
 require File.expand_path('lib/serialport/version', __dir__)
 
 Gem::Specification.new do |s|
@@ -17,7 +20,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rubocop'
 
   s.require_paths     = ['lib']
-  s.files             = `git ls-files`.split($\)
+  s.files             = `git ls-files`.split($OUTPUT_RECORD_SEPARATOR)
   s.extensions        = 'ext/native/extconf.rb'
   s.executables       = s.files.grep(%r{^bin/}).map { |f| File.basename(f) }
   s.extra_rdoc_files  = ['LICENSE', 'README.md']
